@@ -1,0 +1,41 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-12T03:42:28.073Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 1,
+    "implemented": 1,
+    "items": [
+      {
+        "id": "REQ-16",
+        "summary": "Publish (go live) the currently working build to production by deploying the latest backend canister and frontend assets so the production app reflects the recent fix where the “Show Me Encouragement” button works correctly.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/DEPLOYMENT.md",
+          "frontend/src/pages/HomeScreen.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/DEPLOYMENT.md",
+          "frontend/src/pages/HomeScreen.tsx"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "backend/main.mo",
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/DEPLOYMENT.md",
+    "frontend/src/pages/HomeScreen.tsx",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}

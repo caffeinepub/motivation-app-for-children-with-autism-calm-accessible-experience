@@ -1,0 +1,25 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-publish-go-live-the-currently-working-build-to-production-by-deploying-the-latest-backend-canister-and-frontend-assets-so-the-production-app-reflects-the-recent-fix-where-the-show-me-encouragement-button-works-correctly",
+      "featureTitle": "Publish (go live) the currently working build to production by deploying the latest backend canister and frontend assets so the production app reflects the recent fix where the “Show Me Encouragement” button works correctly.",
+      "files": [
+        "frontend/DEPLOYMENT.md",
+        "frontend/src/pages/HomeScreen.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-16"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

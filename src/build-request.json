@@ -1,0 +1,38 @@
+{
+  "kind": "build_request",
+  "title": "Publish latest working changes to production (go live)",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-16",
+      "text": "Publish (go live) the currently working build to production by deploying the latest backend canister and frontend assets so the production app reflects the recent fix where the “Show Me Encouragement” button works correctly.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "yes it is working. could you publish the changes in go live"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A production deployment is performed that updates both backend canister code and frontend assets to the latest version.",
+        "After deployment, the production app loads successfully and the Home screen “Show Me Encouragement” button navigates to the Encouragement screen and displays encouragement content as expected.",
+        "No breaking changes are introduced to authentication (Internet Identity) or existing user data/state as a result of the deployment."
+      ]
+    }
+  ],
+  "constraints": [
+    "Backend must remain a single Motoko actor (all logic in backend/main.mo).",
+    "Create backend/migration.mo only if required to preserve/upgrade existing stable state (conditional migration policy).",
+    "Do not modify any files under frontend/src/components/ui or other immutable frontend paths listed in SYSTEM_CONTEXT."
+  ],
+  "nonGoals": [
+    "Adding new features or changing app behavior beyond publishing the current working changes.",
+    "Introducing new third-party services or deployment providers outside the Internet Computer workflow."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

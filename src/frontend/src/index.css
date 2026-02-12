@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 1rem;
+        /* Warm peach/coral palette - calm and inviting */
+        --background: 0.98 0.01 40;
+        --foreground: 0.25 0.02 30;
+        --card: 1 0 0;
+        --card-foreground: 0.25 0.02 30;
+        --popover: 1 0 0;
+        --popover-foreground: 0.25 0.02 30;
+        /* Warm coral primary */
+        --primary: 0.65 0.15 25;
+        --primary-foreground: 1 0 0;
+        /* Soft peach secondary */
+        --secondary: 0.92 0.05 45;
+        --secondary-foreground: 0.35 0.02 30;
+        --muted: 0.95 0.02 40;
+        --muted-foreground: 0.55 0.02 30;
+        /* Gentle yellow accent */
+        --accent: 0.88 0.12 80;
+        --accent-foreground: 0.35 0.02 30;
+        /* Soft red for destructive */
+        --destructive: 0.60 0.18 15;
+        --destructive-foreground: 1 0 0;
+        --border: 0.90 0.03 40;
+        --input: 0.90 0.03 40;
+        --ring: 0.65 0.15 25;
+        /* Success green */
+        --success: 0.70 0.15 140;
+        --success-foreground: 1 0 0;
+    }
+
+    .dark {
+        --background: 0.20 0.02 30;
+        --foreground: 0.95 0.01 40;
+        --card: 0.25 0.02 30;
+        --card-foreground: 0.95 0.01 40;
+        --popover: 0.25 0.02 30;
+        --popover-foreground: 0.95 0.01 40;
+        --primary: 0.70 0.15 25;
+        --primary-foreground: 0.15 0.02 30;
+        --secondary: 0.30 0.03 35;
+        --secondary-foreground: 0.95 0.01 40;
+        --muted: 0.30 0.03 35;
+        --muted-foreground: 0.70 0.02 40;
+        --accent: 0.75 0.12 80;
+        --accent-foreground: 0.20 0.02 30;
+        --destructive: 0.65 0.18 15;
+        --destructive-foreground: 0.95 0.01 40;
+        --border: 0.35 0.03 35;
+        --input: 0.35 0.03 35;
+        --ring: 0.70 0.15 25;
+        --success: 0.75 0.15 140;
+        --success-foreground: 0.15 0.02 30;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Nunito', 'Quicksand', system-ui, -apple-system, sans-serif;
+    }
+
+    /* Text size variants */
+    .text-size-small {
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+
+    .text-size-small h1 { font-size: 1.5rem; }
+    .text-size-small h2 { font-size: 1.25rem; }
+    .text-size-small h3 { font-size: 1.125rem; }
+    .text-size-small .text-lg { font-size: 1rem; }
+    .text-size-small .text-xl { font-size: 1.125rem; }
+    .text-size-small .text-2xl { font-size: 1.25rem; }
+    .text-size-small .text-3xl { font-size: 1.5rem; }
+
+    .text-size-medium {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .text-size-medium h1 { font-size: 2rem; }
+    .text-size-medium h2 { font-size: 1.5rem; }
+    .text-size-medium h3 { font-size: 1.25rem; }
+    .text-size-medium .text-lg { font-size: 1.125rem; }
+    .text-size-medium .text-xl { font-size: 1.25rem; }
+    .text-size-medium .text-2xl { font-size: 1.5rem; }
+    .text-size-medium .text-3xl { font-size: 2rem; }
+
+    .text-size-large {
+        font-size: 1.125rem;
+        line-height: 1.7;
+    }
+
+    .text-size-large h1 { font-size: 2.5rem; }
+    .text-size-large h2 { font-size: 2rem; }
+    .text-size-large h3 { font-size: 1.5rem; }
+    .text-size-large .text-lg { font-size: 1.25rem; }
+    .text-size-large .text-xl { font-size: 1.5rem; }
+    .text-size-large .text-2xl { font-size: 2rem; }
+    .text-size-large .text-3xl { font-size: 2.5rem; }
+
+    /* Reduced motion support */
+    .reduce-motion * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        * {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+
+    /* Large touch targets */
+    .touch-target {
+        min-height: 3rem;
+        min-width: 3rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .touch-target-lg {
+        min-height: 4rem;
+        min-width: 4rem;
+        padding: 1rem 2rem;
+    }
+}

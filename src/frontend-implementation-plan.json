@@ -1,0 +1,28 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Go-live publish checklist and production verification for Encouragement navigation",
+  "requirements": [
+    {
+      "id": "REQ-16",
+      "summary": "Prepare the frontend go-live release guidance and add a lightweight UI verification hook so production can be validated that “Show Me Encouragement” navigates and renders content without affecting Internet Identity or user state.",
+      "acceptanceCriteria": [
+        "A production deployment is performed that updates both backend canister code and frontend assets to the latest version.",
+        "After deployment, the production app loads successfully and the Home screen “Show Me Encouragement” button navigates to the Encouragement screen and displays encouragement content as expected.",
+        "No breaking changes are introduced to authentication (Internet Identity) or existing user data/state as a result of the deployment."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/DEPLOYMENT.md",
+          "operation": "create",
+          "description": "Add a go-live deployment runbook for the Internet Computer workflow including: building frontend assets, deploying to production, and a post-deploy smoke-check focused on Home -> “Show Me Encouragement” -> Encouragement content loading; explicitly call out that Internet Identity authentication and cached React Query user state must remain intact. Use the selected \"authorization\" component guidance as the reference for Internet Identity/auth expectations (Verify the component's usage instructions before implementing.)"
+        },
+        {
+          "path": "frontend/src/pages/HomeScreen.tsx",
+          "operation": "modify",
+          "description": "Add a non-functional test hook (e.g., a stable data attribute and/or accessibility label) to the “Show Me Encouragement” button to make production smoke verification unambiguous, without changing navigation behavior or impacting Internet Identity flows."
+        }
+      ]
+    }
+  ]
+}

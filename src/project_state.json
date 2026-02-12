@@ -1,0 +1,170 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Build a motivation-focused app for special children (e.g., children with autism), providing simple encouraging content with a calm, accessible interface.",
+  "architectural_notes": [
+    "Add a mechanism to generate and refresh a set of 'daily encouragement' messages (via a generative AI service) and surface them in the 'Show me encouragement' flow."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-calm-highly-accessible-ui-theme-suitable-for-children-with-autism-low-visual-clutter-soft-non-blue-non-purple-palette-clear-typography-consistent-spacing-and-apply-it-consistently-across-all-screens",
+      "title": "Create a calm, highly accessible UI theme suitable for children with autism (low visual clutter, soft non-blue/non-purple palette, clear typography, consistent spacing), and apply it consistently across all screens.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-simple-content-flow-that-delivers-motivational-support-for-children-with-autism-1-a-home-screen-with-a-prominent-show-me-encouragement-action-2-an-encouragement-screen-that-shows-one-short-supportive-message-at-a-time-with-optional-visual-reinforcement-and-3-a-favorites-screen-to-revisit-saved-messages",
+      "title": "Implement a simple content flow that delivers motivational support for children with autism: (1) a Home screen with a prominent 'Show me encouragement' action, (2) an Encouragement screen that shows one short supportive message at a time with optional visual reinforcement, and (3) a Favorites screen to revisit saved messages.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-provide-an-optional-routine-mode-that-presents-a-small-set-of-predictable-repeatable-encouragement-categories-e-g-calm-down-try-again-good-job-transitions-so-children-can-choose-what-they-need-without-searching",
+      "title": "Provide an optional 'Routine mode' that presents a small set of predictable, repeatable encouragement categories (e.g., Calm Down, Try Again, Good Job, Transitions) so children can choose what they need without searching.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-settings-screen-with-accessibility-focused-controls-text-size-small-medium-large-reduced-motion-toggle-sound-toggle-for-simple-ui-chimes-and-optional-text-to-speech-for-encouragement-messages-using-built-in-browser-capabilities-only",
+      "title": "Add a Settings screen with accessibility-focused controls: text size (small/medium/large), reduced motion toggle, sound toggle for simple UI chimes, and optional text-to-speech for encouragement messages (using built-in browser capabilities only).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-wire-the-frontend-to-the-backend-using-react-query-for-loading-encouragement-messages-favorites-and-stats-with-clear-loading-empty-error-states-designed-to-be-non-alarming-for-children",
+      "title": "Wire the frontend to the backend using React Query for loading encouragement messages, favorites, and stats, with clear loading/empty/error states designed to be non-alarming for children.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-an-optional-lightweight-reward-mechanic-after-viewing-n-encouragement-messages-configurable-default-5-show-a-simple-celebratory-badge-screen-and-store-earned-badges-for-the-user",
+      "title": "Add an optional lightweight reward mechanic: after viewing N encouragement messages (configurable, default 5), show a simple celebratory badge screen and store earned badges for the user.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-static-generated-image-assets-mascot-badges-subtle-background-under-frontend-public-assets-generated-and-render-them-in-the-ui-where-appropriate-no-backend-image-serving",
+      "title": "Add static generated image assets (mascot, badges, subtle background) under frontend/public/assets/generated and render them in the UI where appropriate (no backend image serving).",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-show-me-encouragement-encouragement-screen-to-display-a-today-s-encouragement-message-section-sourced-from-the-new-backend-daily-encouragement-api-while-keeping-the-existing-random-encouragement-flow-available",
+      "title": "Update the “Show Me Encouragement” (Encouragement) screen to display a “Today’s Encouragement” message section sourced from the new backend daily encouragement API, while keeping the existing random encouragement flow available.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-react-query-hook-for-fetching-the-daily-encouragement-message-and-integrate-it-into-the-encouragement-screen-without-modifying-any-immutable-hook-files",
+      "title": "Add a React Query hook for fetching the daily encouragement message and integrate it into the Encouragement screen without modifying any immutable hook files.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-improve-the-encouragement-screen-empty-state-ux-so-that-if-the-random-messages-list-is-empty-or-temporarily-unavailable-the-screen-still-shows-helpful-content-display-today-s-encouragement-if-available-and-present-a-calm-retry-action-for-loading-random-messages",
+      "title": "Improve the Encouragement screen empty-state UX so that if the random messages list is empty (or temporarily unavailable), the screen still shows helpful content: display “Today’s Encouragement” (if available) and present a calm retry action for loading random messages.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-publish-go-live-the-currently-working-build-to-production-by-deploying-the-latest-backend-canister-and-frontend-assets-so-the-production-app-reflects-the-recent-fix-where-the-show-me-encouragement-button-works-correctly",
+      "title": "Publish (go live) the currently working build to production by deploying the latest backend canister and frontend assets so the production app reflects the recent fix where the “Show Me Encouragement” button works correctly.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Provide motivation-focused content and interactions tailored for children with autism/special needs",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Design a calm, highly accessible UI suitable for special-needs children",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Implement backend data models and APIs to store: encouragement messages (with category), user favorites, and simple usage stats (e.g., count of messages viewed, last viewed timestamp) persisted per user principal.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Generate daily encouragement messages using a generative AI and display them in the 'Show me encouragement' page",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-9",
+      "summary": "Add a backend query API that returns a single deterministic “daily encouragement” message for the current day (based on the canister’s current time), chosen from a built-in pool of pre-generated encouragement messages stored in the canister.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-10",
+      "summary": "Seed and maintain a built-in pool of daily encouragement messages in the backend so the canister can serve a different daily message over time without requiring admin actions.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-11",
+      "summary": "Ensure the backend always has a non-empty set of random encouragement messages available for regular users by seeding a built-in default message pool into `encouragementMessages` at canister initialization (without requiring admin actions).",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-12",
+      "summary": "Add a backend safety fallback so `getEncouragementMessages()` never returns an empty list to the frontend: if `encouragementMessages` is empty at query time, return a small synthesized list derived from an internal built-in pool (may reuse `dailyEncouragementPool` text) with deterministic IDs and a default category.",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-13",
+      "summary": "Publish/deploy the latest working changes to production (go live)",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Motivation app for children with autism (calm, accessible experience)",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
